@@ -1,0 +1,56 @@
+// For information on how to create your own theme, please see:
+// http://ionicframework.com/docs/theming/
+
+ :root {
+    --ion-background-color: #ffffff;
+    --ion-size: cover;
+
+	//Gradient
+	--ion-color-gradient-yellow: linear-gradient(to bottom right,rgb(255, 179, 0),rgb(255, 213, 0),rgb(255, 213, 0),rgb(238, 255, 7));
+	--ion-color-gradient-blue: linear-gradient(to bottom right, rgb(0, 0, 110),rgb(38, 38, 201),rgb(20, 116, 213),rgb(0, 234, 255));
+
+	//Event color
+	--ion-color-event: linear-gradient(40deg,rgb(33, 33, 254),rgb(1, 1, 169),rgb(0, 0, 69));
+
+	//App BG
+	--ion-color-bg-blue: linear-gradient(to right,var(--ion-color-blue-shade),var(--ion-color-blue-shade),var(--ion-color-blue),var(--ion-color-blue),var(--ion-color-blue),var(--ion-color-blue),var(--ion-color-blue-shade),var(--ion-color-blue-shade));
+    --ion-color-bg-white: linear-gradient(to right,var(--ion-color-white-shade),var(--ion-color-white-shade),var(--ion-color-white-back),var(--ion-color-white-back),var(--ion-color-white-back),var(--ion-color-white-back),var(--ion-color-white-shade),var(--ion-color-white-shade));
+	
+	//App blue color
+    --ion-color-blue: #1b217e;
+	--ion-color-blue-rgb: 27,33,126;
+	--ion-color-blue-contrast: #ffffff;
+	--ion-color-blue-contrast-rgb: 255,255,255;
+	--ion-color-blue-shade: #181d6f;
+	--ion-color-blue-dark: #0f1248;
+	--ion-color-blue-tint: #32378b;
+
+    //App white color
+    --ion-color-white: #fafcff;
+	--ion-color-white-rgb: 250,252,255;
+	--ion-color-white-contrast: #000000;
+	--ion-color-white-contrast-rgb: 0,0,0;
+	--ion-color-white-shade: #dcdee0;
+	--ion-color-white-back: #efefef;
+	--ion-color-white-dark: #9c9c9c;
+	--ion-color-white-tint: #fbfcff;
+
+	//App black color
+	--ion-color-black: #1d2020;
+	--ion-color-black-rgb: 29,32,32;
+	--ion-color-black-contrast: #ffffff;
+	--ion-color-black-contrast-rgb: 255,255,255;
+	--ion-color-black-shade: #1a1c1c;
+	--ion-color-black-tint: #3b3e3e;
+
+	//App yellow color
+	--ion-color-yellow: #ffd500;
+	--ion-color-yellow-rgb: 255,213,0;
+	--ion-color-yellow-contrast: #000000;
+	--ion-color-yellow-contrast-rgb: 0,0,0;
+	--ion-color-yellow-shade: #e0bb00;
+	--ion-color-yellow-dark: #ad9000;
+	--ion-color-yellow-tint: #ffd91a;
+
+ }
+ 

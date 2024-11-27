@@ -1,0 +1,61 @@
+<!--<div *ngFor="let i of user" class="header-box">
+   <ion-header class="home-header" mode="md" *ngIf="i.email == email">
+      <div class="header-shadow"></div>
+      <ion-button class="header-btn" color="custom" fill="clear"  (click)="sendToProfile(i)"></ion-button>
+      <div class="img-box">
+         <img  class="home-image" src="{{i.image}}" alt="">
+      </div>
+      <div></div>
+   </ion-header>
+
+   <ion-content [fullscreen]="true" scroll="true" mode="md">
+     <ion-text style="color: black">{{i.name}}</ion-text>
+   </ion-content>
+   
+</div>-->
+
+<ion-header class="home-header" mode="md">
+   <div class="header-shadow"></div>
+   <ion-button class="header-btn" color="custom" fill="clear" (click)="logOut()"><ion-icon class="icon" name="log-out-outline"></ion-icon></ion-button>
+
+   <div class="img-box">
+      <img  class="home-image" src="{{image}}">
+   </div>
+   
+
+   <ion-button class="header-btn" color="custom" fill="clear" (click)="sendToProfile()"><ion-icon class="icon" name="person-circle-outline"></ion-icon></ion-button>
+</ion-header>
+
+<ion-content [fullscreen]="true" scroll="true" mode="md">
+
+   <ion-title class="home-title">Evento aleatorio</ion-title>
+   
+   <ion-item *ngFor="let r of randomE" class="event-item" color="custom" mode="md" lines="none">
+      <ion-card class="event-card" (click)="openEvent(r)">
+          <ion-card-header class="event-card-header">
+              <img class="event-img" src="{{r.image}}">
+          </ion-card-header>
+  
+          <ion-card-content class="event-card-content">
+              <ion-title class="event-title">{{r.name}}</ion-title>
+              <div class="text-grid">
+                  <ion-item class="text-box" lines="none" color="custom">
+                      <ion-icon name="map-outline" class="text-icon"></ion-icon>
+                      <pre style="margin: 0px; position: relative;"><ion-label class="text"> {{r.city}}</ion-label></pre>
+                  </ion-item>
+                  <ion-item class="text-box" lines="none" color="custom">
+                      <ion-icon name="calendar-number-outline" class="text-icon"></ion-icon>
+                      <pre style="margin: 0px; position: relative;"><ion-label class="text"> {{r.date}}</ion-label></pre>
+                  </ion-item>
+              </div>
+          </ion-card-content>
+      </ion-card>
+    </ion-item>
+
+    <ion-button class="qr-btn" fill="clear" color="custom" mode="md" (click)="sendToqr()">
+      <ion-icon class="qr-icon" name="qr-code-outline"></ion-icon>
+    </ion-button>
+
+</ion-content>
+
+

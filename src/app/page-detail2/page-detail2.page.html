@@ -1,0 +1,56 @@
+<ion-content [fullscreen]="true" scroll="true" mode="md">
+
+  <div class="detail-box" lines="none">
+    <ion-item class="event-item" color="custom" mode="md" lines="none">
+      <ion-card class="event-card">
+        <ion-card-header class="event-card-header">
+            <img class="event-img" src="{{myEvent.image}}">
+        </ion-card-header>
+
+        <ion-card-content class="event-card-content">
+            <ion-title class="event-title">{{myEvent.name}}</ion-title>
+
+
+            <div class="text-grid">
+              <ion-item class="text-box" lines="none" color="custom">
+                <ion-icon name="map-outline" class="text-icon"></ion-icon>
+                <pre style="margin: 0px; position: relative;"><ion-label class="text"> {{myEvent.city}}</ion-label></pre>
+              </ion-item>
+              <ion-item class="text-box" lines="none" color="custom">
+                <ion-icon name="calendar-number-outline" class="text-icon"></ion-icon>
+                <pre style="margin: 0px; position: relative;"><ion-label class="text"> {{myEvent.date}}</ion-label></pre>                  
+              </ion-item>
+            </div>
+
+            <ion-button (click)="Participate()" class="event-btn" color="custom" fill="clear" mode="md">Participar</ion-button>
+            
+
+        </ion-card-content>
+    </ion-card>
+    </ion-item>
+
+    <ion-text class="detail-info">{{myEvent.info}}</ion-text>
+  </div>
+
+  <div class="pes-box" lines="none">
+  <!--
+    <div class="pestaña-a"><ion-text class="pes-text">Comentarios</ion-text></div>
+    <div class="pestaña-b" click="sendToComment(i)"><ion-text class="pes-text">Participantes</ion-text></div>
+  -->
+    <ion-button class="pestaña-a" fill="clear" color="custom" mode="md"  (click)="sendToComment(myEvent)">Comentarios</ion-button>
+    <ion-button class="pestaña-b" fill="clear" color="custom" mode="md">Participantes</ion-button>
+  </div>
+
+  <div style="margin-bottom: 85px;">
+    <ion-item class="comment-item" color="custom" *ngFor="let i of list">
+      <img src="{{i.uImage}}" class="comment-img">
+      <div class="comment-grid">
+        <ion-text class="comment-name">{{i.uName}}</ion-text>
+        <ion-text class="comment-info">{{i.uEmail}}</ion-text>
+      </div>
+    </ion-item>
+  </div>
+
+  <ion-button (click)="regresar()" class="back" fill="clear" color="custom" mode="md"><ion-icon  name="close-outline"></ion-icon></ion-button>
+
+</ion-content>

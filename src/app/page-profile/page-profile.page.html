@@ -1,0 +1,31 @@
+<ion-header class="event-header" mode="md">
+  <div class="header-shadow"></div>
+  <ion-title class="ev-title">Perfil de usuario</ion-title>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+      <img src="{{image}}" class="pro-img">
+
+      <ion-button (click)=" updateImage()" class="edit-btn" fill="clear" color="custom" mode="md"><ion-icon name="create-outline"></ion-icon></ion-button>
+
+      <ion-title class="us-title">{{name}}</ion-title>
+
+      <ion-card class="pro-card" color="custom" mode="md">
+        <ion-card-content class="pro-card-con">
+
+          <ion-item class="pro-item" mode="md" color="custom" lines="none">
+            <ion-label class="pro-label">{{email}}</ion-label>
+          </ion-item>
+          
+          <ion-item class="pro-item" mode="md" color="custom" lines="none">
+            <ion-label class="pro-label">{{rut}}</ion-label>
+          </ion-item>
+
+        </ion-card-content>
+        <ion-card-header class="pro-card-header">
+          <ion-button (click)="logOut()" class="pro-btn" color="custom" fill="clear" mode="md">Cerrar sesión</ion-button>
+        </ion-card-header>
+      </ion-card>
+
+      <ion-button (click)="regresar()" class="back" fill="clear" color="custom" mode="md"><ion-icon  name="close-outline"></ion-icon></ion-button>
+</ion-content>

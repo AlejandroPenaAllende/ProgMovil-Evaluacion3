@@ -1,0 +1,129 @@
+<ion-content [fullscreen]="true" scroll="true" mode="md">
+  <img class="login-logo" src="assets/IMG/duoc_logo.png" alt="Logo de la apliación">
+  <ion-card class="form-card" mode="md">
+    <ion-card-header class="form-card-header" mode="md">
+      <h1 class="form-title">Registra tu cuenta</h1>
+    </ion-card-header>
+    <ion-card-content class="form-card-content" mode="md">
+        <form [formGroup]="registerF" class="form-box">
+          <div class="mini-item-box"  style="margin-bottom: 20px;">
+            <!--------------------------------------------------------------->
+            <div>
+              <ion-item class="form-item" color="Custom" mode="md" lines="none">
+                <ion-label class="form-label" position="floating" color="custom" mode="md">Nombre:</ion-label>
+                <ion-input class="form-input" type="text" formControlName="name"></ion-input>
+              </ion-item>
+  
+              <div class="alert" *ngIf="registerF.get('name')?.invalid && (registerF.get('name')?.dirty ||
+                                        registerF.get('name')?.touched)">
+                <div class="alert" *ngIf="registerF.get('name')?.hasError('required')">
+                  *Campo obligatorio
+                </div>
+                <div class="alert" *ngIf="registerF.get('name')?.hasError('minlength')">
+                  *Minimo 3 caracteres
+                </div>
+              </div>
+            </div>
+            <!--------------------------------------------------------------->
+            <!--------------------------------------------------------------->
+            <div>
+              <ion-item class="form-item" color="Custom" mode="md" lines="none">
+                <ion-label class="form-label" position="floating" color="custom" mode="md">Apellido:</ion-label>
+                <ion-input class="form-input" type="text" formControlName="lastname"></ion-input>
+              </ion-item>
+
+              <div class="alert" *ngIf="registerF.get('lastname')?.invalid && (registerF.get('lastname')?.dirty ||
+                                        registerF.get('lastname')?.touched)">
+                <div class="alert" *ngIf="registerF.get('lastname')?.hasError('required')">
+                  *Campo obligatorio
+                </div>
+                <div class="alert" *ngIf="registerF.get('lastname')?.hasError('minlength')">
+                  *Minimo 3 caracteres
+                </div>
+              </div>
+            </div>
+            <!--------------------------------------------------------------->
+          </div>
+          <!--------------------------------------------------------------->
+          <div style="margin-bottom: 20px;">
+            <ion-item class="form-item" color="Custom" mode="md" lines="none">
+              <ion-label class="form-label" position="floating" color="custom" mode="md">Correo:</ion-label>
+              <ion-input class="form-input" formControlName="email"></ion-input>
+            </ion-item>
+  
+            <div class="alert" *ngIf="registerF.get('email')?.invalid && (registerF.get('email')?.dirty ||
+                                      registerF.get('email')?.touched)">
+              <div class="alert" *ngIf="registerF.get('email')?.hasError('required')">
+                *Campo obligatorio
+              </div>
+              <div class="alert" *ngIf="registerF.get('email')?.hasError('email')">
+                *Correo invalido
+              </div>
+            </div>
+          </div>
+          <!--------------------------------------------------------------->
+          <!--------------------------------------------------------------->
+          <div style="margin-bottom: 20px;">
+            <ion-item class="form-item" color="Custom" mode="md" lines="none">
+              <ion-label class="form-label" position="floating" color="custom" mode="md">Rut:</ion-label>
+              <ion-input class="form-input" formControlName="rut"></ion-input>
+            </ion-item>
+          
+            <div class="alert" *ngIf="registerF.get('rut')?.invalid && (registerF.get('rut')?.dirty ||
+                                      registerF.get('rut')?.touched)">
+              <div class="alert" *ngIf="registerF.get('rut')?.hasError('required')">
+                *Campo obligatorio
+              </div>
+              <div class="alert" *ngIf="registerF.get('rut')?.hasError('pattern')">
+                *RUT invalido
+              </div>
+            </div>
+
+          </div>
+          <!--------------------------------------------------------------->
+          <!--------------------------------------------------------------->
+          <div style="margin-bottom: 20px;">
+            <ion-item class="form-item" color="Custom" mode="md" lines="none">
+              <ion-label class="form-label" position="floating" color="custom" mode="md">Contraseña:</ion-label>
+              <ion-input class="form-input" type="password" formControlName="password"></ion-input>
+            </ion-item>
+
+            <div class="alert" *ngIf="registerF.get('password')?.invalid && (registerF.get('password')?.dirty ||
+                                      registerF.get('password')?.touched)">
+              <div class="alert" *ngIf="registerF.get('password')?.hasError('required')">
+                *Campo obligatorio
+              </div>
+              <div class="alert" *ngIf="registerF.get('password')?.hasError('pattern')">
+                *Contraseña invalida
+              </div>
+            </div>
+          </div>
+          <!--------------------------------------------------------------->
+          <!--------------------------------------------------------------->
+          <div>
+            <ion-item class="form-item" color="Custom" mode="md" lines="none">
+              <ion-label class="form-label" position="floating" color="custom" mode="md">Confirmar contraseña:</ion-label>
+              <ion-input class="form-input" type="password" formControlName="confirm"></ion-input>
+            </ion-item>
+
+            <div class="alert" *ngIf="registerF.get('confirm')?.invalid && (registerF.get('confirm')?.dirty ||
+                                      registerF.get('confirm')?.touched)">
+              <div class="alert" *ngIf="registerF.get('confirm')?.hasError('required')">
+                *Campo obligatorio
+              </div>
+              <div class="alert" *ngIf="registerF.get('confirm')?.hasError('pattern')">
+                *Contraseña invalida
+              </div>
+            </div>
+          </div>
+          <!--------------------------------------------------------------->
+      </form>
+    </ion-card-content>
+    <ion-card-header class="form-card-header" mode="md">
+      <div class="boton-box">
+        <ion-button [disabled]="!registerF.valid" (click)="registerUser()" class="boton-b" color="custom" fill="clear" mode="md">Registrar</ion-button>
+        <ion-button (click)="sendToLogin()"  class="boton-c" color="custom" fill="clear" mode="md">Volver</ion-button>
+      </div>
+    </ion-card-header>
+  </ion-card>
+</ion-content>

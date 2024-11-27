@@ -1,0 +1,32 @@
+.tab-menu{
+    align-items: end;
+    justify-content: end;
+    text-align:end;
+    background: transparent;
+    color: transparent;
+}
+
+ion-menu::part(backdrop){
+    background: transparent;
+    border: none;
+}
+
+ion-menu::part(container){
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: -5px 5px 20px 0px black;
+    height: 27.2%;
+    margin-right: 12px;
+    margin-top: 145%;
+    
+}
+
+.menu-item{
+    font-family: 'Outfit';
+    font-size: 17px;
+}
+
+
+

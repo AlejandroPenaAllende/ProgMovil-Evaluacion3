@@ -1,0 +1,29 @@
+<ion-header class="event-header" mode="md">
+    <div class="header-shadow"></div>
+    <ion-title class="ev-title">Eventos disponibles</ion-title>
+</ion-header>
+
+<ion-content [fullscreen]="true" scroll="true" mode="md">
+
+  <ion-item *ngFor="let i of event" class="event-item" color="custom" mode="md" lines="none">
+    <ion-card class="event-card" (click)="openEvent(i)">
+        <ion-card-header class="event-card-header">
+            <img class="event-img" src="{{i.image}}">
+        </ion-card-header>
+
+        <ion-card-content class="event-card-content">
+            <ion-title class="event-title">{{i.name}}</ion-title>
+            <div class="text-grid">
+                <ion-item class="text-box" lines="none" color="custom">
+                    <ion-icon name="map-outline" class="text-icon"></ion-icon>
+                    <pre style="margin: 0px; position: relative;"><ion-label class="text"> {{i.city}}</ion-label></pre>
+                </ion-item>
+                <ion-item class="text-box" lines="none" color="custom">
+                    <ion-icon name="calendar-number-outline" class="text-icon"></ion-icon>
+                    <pre style="margin: 0px; position: relative;"><ion-label class="text"> {{i.date}}</ion-label></pre>
+                </ion-item>
+            </div>
+        </ion-card-content>
+    </ion-card>
+  </ion-item>
+</ion-content>

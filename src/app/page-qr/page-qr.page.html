@@ -1,0 +1,37 @@
+<ion-header class="event-header" mode="md">
+  <div class="header-shadow"></div>
+  <ion-title class="ev-title">Eventos ingresados</ion-title>
+</ion-header>
+
+<ion-content [fullscreen]="true" scroll="true" mode="md">
+
+  <div style="margin-bottom: 75px;">
+    <ion-item *ngFor="let i of assist" class="event-item" color="custom" mode="md" lines="none">
+      <ion-card class="event-card">
+          <ion-card-header class="event-card-header">
+              <img class="event-img" src="{{i.eImage}}">
+          </ion-card-header>
+  
+          <ion-card-content class="event-card-content">
+              <ion-title class="event-title">{{i.eName}}</ion-title>
+              <div class="content-grid">
+                <div class="text-grid">
+                  <ion-item class="text-box" lines="none" color="custom">
+                      <ion-icon name="map-outline" class="text-icon"></ion-icon>
+                      <pre style="margin: 0px; position: relative;"><ion-label class="text"> {{i.eCity}}</ion-label></pre>
+                  </ion-item>
+                  <ion-item class="text-box" lines="none" color="custom">
+                      <ion-icon name="calendar-number-outline" class="text-icon"></ion-icon>
+                      <pre style="margin: 0px; position: relative;"><ion-label class="text"> {{i.eDate}}</ion-label></pre>
+                  </ion-item>
+                </div>
+                <ion-button color="custom" fill="clear" mode="md" class="btn-qr" (click)="abrirAssist(i)"><ion-icon class="icon-qr" name="qr-code-outline"></ion-icon></ion-button>
+              </div>
+          </ion-card-content>
+      </ion-card>
+    </ion-item>
+  </div>
+
+  <ion-button (click)="regresar()" class="back" fill="clear" color="custom" mode="md"><ion-icon  name="close-outline"></ion-icon></ion-button>
+
+</ion-content>
