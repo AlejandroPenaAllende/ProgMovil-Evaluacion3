@@ -27,7 +27,7 @@ export class ApiDataService {
 
   //Metodo que devuelve el valor de email guardado en el sessionStorage solo si el valor no es nulo
   isLoggedIn(){
-    return sessionStorage.getItem('email')!=null;
+    return sessionStorage.getItem('Email')!=null;
   }
 
   //Metodo que ingresa los datos de un nuevo user a la data

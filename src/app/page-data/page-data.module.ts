@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { PageDataPageRoutingModule } from './page-data-routing.module';
 
 import { PageDataPage } from './page-data.page';
+import { QRCodeModule } from 'angularx-qrcode';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { PageDataPage } from './page-data.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    PageDataPageRoutingModule
+    PageDataPageRoutingModule,
+    QRCodeModule
   ],
   declarations: [PageDataPage]
 })

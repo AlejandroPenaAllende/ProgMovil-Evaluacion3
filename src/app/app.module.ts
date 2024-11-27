@@ -12,10 +12,11 @@ import { ApiDataService } from './service/api-data.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import {NgxImageCompressService} from 'ngx-image-compress';
+import { QRCodeModule } from 'angularx-qrcode';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, FormsModule, ReactiveFormsModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, FormsModule, ReactiveFormsModule, QRCodeModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },provideHttpClient(), ApiDataService,NgxImageCompressService],
   bootstrap: [AppComponent]
 })

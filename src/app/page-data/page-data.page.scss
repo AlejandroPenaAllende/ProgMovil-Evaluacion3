@@ -137,3 +137,16 @@ ion-content{
     right: 43%;
     z-index: 20;
 }
+
+.qr{
+    background: var(--ion-color-black-tint);
+    margin-left: 100px;
+    margin-bottom: 100px;
+    padding: 10px;
+    padding-bottom: -2px;
+    position: absolute;
+    top: 63%;
+    left: 0%;
+    border-radius: 10px;
+}
+

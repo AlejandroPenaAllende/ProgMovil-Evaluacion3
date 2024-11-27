@@ -27,11 +27,11 @@
     </ion-item>
   </div>
 
-  <ion-card class="ion-text-center">
-    <ion-card-content>
-     
-    </ion-card-content>
-  </ion-card>
+   
+      <qrcode class="qr" [qrdata]="qrData" [width]="200" [errorCorrectionLevel]="'M'"></qrcode>
+    
+    
+
 
   <ion-button (click)="regresar()" class="back" fill="clear" color="custom" mode="md"><ion-icon  name="close-outline"></ion-icon></ion-button>
 
