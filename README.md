@@ -4,3 +4,5 @@ Repositorio para la Evaluación 3 del ramo Programación de aplicaciones móvile
 Url github deploy Json: https://github.com/AlejandroPenaAllende/Evaluacion3-BD.git
 
 //instalar npm i ngx-image-compress
+           npm install @capacitor/android 
+           npx cap add android
